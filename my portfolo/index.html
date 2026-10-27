@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhial Gach Tut | NAATH TECH ACADEMY & IT TECH CENTRE</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#050b14',
+                        cardBg: '#0f172a',
+                        cardBorder: '#1e293b',
+                        accentTeal: '#10b981',
+                        accentCyan: '#38bdf8'
+                    },
+                    animation: {
+                        'marquee': 'marquee 25s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050b14;
+            color: #f8fafc;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.08) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(56, 189, 248, 0.08) 0px, transparent 50%);
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+        .glass-nav {
+            background: rgba(5, 11, 20, 0.90);
+            backdrop-filter: blur(16px);
+        }
+        .card-box {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(30, 41, 59, 0.85);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-emerald-500 selection:text-slate-900 w-full overflow-x-hidden">
+
+    <!-- Header / Navbar with Real Naath Tech Logo -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#top" class="flex items-center gap-2 sm:gap-3 group">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-emerald-500/50 shadow-md shrink-0 bg-slate-900 flex items-center justify-center">
+                    <img src="logo naath tech.jpeg" alt="Naath Tech Logo" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <span class="font-bold text-xs sm:text-base tracking-tight text-white block leading-tight">NAATH TECH ACADEMY</span>
+                    <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 tracking-wider">Empowering Naath</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-emerald-400 transition-colors">About Author</a>
+                <a href="#ittech" class="hover:text-cyan-400 transition-colors">IT Tech Centre</a>
+                <a href="#courses" class="hover:text-emerald-400 transition-colors">Courses</a>
+                <a href="#connect" class="hover:text-emerald-400 transition-colors">Contact</a>
+                <a href="#register" class="text-emerald-400 font-semibold">Online Registration</a>
+            </nav>
+
+            <div>
+                <a href="#register" class="px-3.5 py-2 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-medium text-slate-950 bg-emerald-400 hover:bg-emerald-300 rounded-xl shadow-lg shadow-emerald-500/20 transition-all font-bold">
+                    Register
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20 w-full" id="top">
+        <!-- Hero Section -->
+        <section class="py-16 sm:py-24 md:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 sm:w-96 sm:h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex flex-col items-center text-center space-y-10 relative z-10 w-full">
+                
+                <!-- Centered Graduation Photo Card -->
+                <div class="relative w-full max-w-xs sm:max-w-sm">
+                    <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-3xl blur-2xl opacity-30"></div>
+                    <div class="relative rounded-3xl card-box p-4 sm:p-6 shadow-2xl space-y-4">
+                        <div class="overflow-hidden rounded-2xl border-2 border-emerald-500/40 shadow-md bg-slate-900 h-64 sm:h-72">
+                            <img src="nhial gach tut.png" alt="Nhial Gach Tut Graduation" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500'" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="space-y-1">
+                            <h3 class="text-lg sm:text-xl font-bold text-white">Nhial Gach Tut (Yohanis Nhial)</h3>
+                            <p class="text-xs font-semibold text-emerald-400">IT: Web Dev & DB Administration</p>
+                            <p class="text-[11px] text-slate-400">Mekdela College, Gambella Campus</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Text & Intro -->
+                <div class="max-w-3xl space-y-6 w-full px-2">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-950/80 text-emerald-400 border border-emerald-800 shadow-inner">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Program Coordinator · IT Instructor · Software Developer
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                        Empowering the Naath generation through <em class="not-italic text-emerald-400">technology & education.</em>
+                    </h1>
+                    
+                    <p class="text-sm sm:text-lg text-slate-300 leading-relaxed">
+                        Founder of <strong>NAATH TECH ACADEMY</strong> (Online Classes). Program Coordinator at Naath Tech Academy, IT Instructor, and Software Developer based in Gambella, Ethiopia. Collaborating with <strong>IT TECH CENTRE</strong> (Regular In-Person Classes led by Gatluak Pur Bol) to bring digital literacy to Bentiu, Fangak, Akobo, Nasir, and globally.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4 w-full">
+                        <a href="#register" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold shadow-lg shadow-emerald-500/20 transition-all flex items-center justify-center gap-2 text-sm">
+                            <i data-lucide="user-plus" class="w-5 h-5"></i> Naath Tech Online Registration
+                        </a>
+                        <a href="#ittech" class="w-full sm:w-auto px-6 py-3.5 rounded-xl border border-cyan-700 hover:bg-cyan-950/40 text-cyan-300 font-medium transition-colors flex items-center justify-center gap-2 text-sm">
+                            <i data-lucide="award" class="w-4 h-4"></i> IT Tech Centre Regular Class
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seamless Non-Stop Infinite Marquee Ticker -->
+        <div class="border-y border-slate-800/80 bg-slate-900/40 py-3 sm:py-4 overflow-hidden w-full flex my-8">
+            <div class="flex whitespace-nowrap animate-marquee shrink-0 gap-6 sm:gap-8 text-xs sm:text-sm font-semibold text-slate-400">
+                <span>· BENTIU</span>
+                <span>· FANGAK</span>
+                <span>· AKOBO</span>
+                <span>· NASIR</span>
+                <span>· GAMBELLA</span>
+                <span>· NAATH TECH ACADEMY (ONLINE)</span>
+                <span>· IT TECH CENTRE (REGULAR CLASS)</span>
+                <span>· BASIC COMPUTER & EXCEL</span>
+                <span>· BENTIU</span>
+                <span>· FANGAK</span>
+                <span>· AKOBO</span>
+                <span>· NASIR</span>
+            </div>
+            <div class="flex whitespace-nowrap animate-marquee shrink-0 gap-6 sm:gap-8 text-xs sm:text-sm font-semibold text-slate-400" aria-hidden="true">
+                <span>· BENTIU</span>
+                <span>· FANGAK</span>
+                <span>· AKOBO</span>
+                <span>· NASIR</span>
+                <span>· GAMBELLA</span>
+                <span>· NAATH TECH ACADEMY (ONLINE)</span>
+                <span>· IT TECH CENTRE (REGULAR CLASS)</span>
+                <span>· BASIC COMPUTER & EXCEL</span>
+                <span>· BENTIU</span>
+                <span>· FANGAK</span>
+                <span>· AKOBO</span>
+                <span>· NASIR</span>
+            </div>
+        </div>
+
+        <!-- About the Author & Program Section -->
+        <section id="about" class="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">Biography & Background</span>
+                <h2 class="text-2xl sm:text-4xl font-bold text-white mt-3">About the Author: Nhial Gach Tut</h2>
+                <p class="text-slate-400 text-sm mt-2">IT Expert, software developer, author, and passionate community educator.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 sm:gap-12">
+                <!-- Author Profile Card -->
+                <div class="card-box p-6 sm:p-10 rounded-3xl space-y-6 shadow-2xl">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-emerald-950 text-emerald-400 flex items-center justify-center border border-emerald-800 shadow-inner shrink-0">
+                            <i data-lucide="user" class="w-6 h-6 sm:w-7 sm:h-7"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-lg sm:text-xl">Nhial Gach Tut</h3>
+                            <p class="text-xs text-emerald-400 font-medium">B.Sc. IT & ICT Level IV Professional</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        Nhial Gach Tut holds a Bachelor of Science degree in Information Technology from <strong>University of people</strong> and completed ICT Level IV training in Web Development & Database Administration at <strong>Mekdela College (Gambella Campus)</strong>. He serves as a Program Coordinator at Africa Relief Ministries and is the founder of NAATH TECH ACADEMY.
+                    </p>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        He is also an accomplished author who published the six-chapter book <em>"Nuer Is One Nation"</em> via Amazon KDP, and developed mobile web readers and Amharic-to-Nuer educational platforms.
+                    </p>
+                </div>
+
+                <!-- Academy & Program Vision Card (Using Real Logo image_e1128a.jpg) -->
+                <div class="card-box p-6 sm:p-10 rounded-3xl space-y-6 shadow-2xl">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-cyan-950 text-cyan-400 flex items-center justify-center border border-cyan-800 shadow-inner shrink-0 overflow-hidden">
+                            <img src="logo naath tech.jpeg" alt="Naath Tech Logo" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-lg sm:text-xl">Naath Tech Academy (Online)</h3>
+                            <p class="text-xs text-cyan-400 font-medium">Borderless Digital Literacy Initiative</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        <strong>NAATH TECH ACADEMY</strong> delivers flexible, high-quality technical instruction and digital empowerment <strong>entirely online</strong>. Our reach spans from <strong>Bentiu, Fangak, Akobo, Nasir</strong>, to students all over the world through virtual community classes and interactive web sessions.
+                    </p>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        With over 180+ active learners, our online curriculum covers foundational computing, cybersecurity, data analysis, and modern artificial intelligence tools.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dedicated IT TECH CENTRE Section & Owner Form (Using Real Photo image_e11360.jpg) -->
+        <section id="ittech" class="py-20 sm:py-28 bg-slate-900/60 border-y border-slate-800/80 w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+                <div class="text-center max-w-3xl mx-auto">
+                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-950 text-cyan-400 border border-cyan-800">Regular In-Person Classes & Official Certification</span>
+                    <h2 class="text-2xl sm:text-4xl font-bold text-white mt-3">IT TECH CENTRE & Director Gatluak Pur Bol</h2>
+                    <p class="text-slate-400 text-sm mt-2">Providing structured physical classrooms and official certified training in collaboration with Naath Tech Academy.</p>
+                </div>
+
+                <div class="grid md:grid-cols-12 gap-8 sm:gap-12 items-start">
+                    <!-- Owner Profile & Background Card (Using Real Photo image_e11360.jpg) -->
+                    <div class="md:col-span-5 card-box p-6 sm:p-10 rounded-3xl space-y-6 shadow-2xl">
+                        <div class="flex flex-col sm:flex-row items-center gap-6">
+                            <div class="w-32 h-32 rounded-2xl overflow-hidden border-2 border-cyan-500/40 shadow-md shrink-0 bg-slate-900">
+                                <img src="gpur.jpg" alt="Gatluak Pur Bol" class="w-full h-full object-cover object-top">
+                            </div>
+                            <div class="text-center sm:text-left space-y-1">
+                                <h3 class="font-bold text-white text-xl sm:text-2xl">Gatluak Pur Bol</h3>
+                                <p class="text-xs text-cyan-400 font-semibold uppercase tracking-wider">Director & Owner</p>
+                                <p class="text-xs text-slate-300">Computer Science Graduate, IT expert specialist Metu University</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-6">
+                            <p>
+                                <strong>Gatluak Pur Bol</strong> is a distinguished Computer Science graduate from Metu University who leads IT TECH CENTRE. 
+                            </p>
+                            <p>
+                                While Naath Tech Academy focuses on online learning, IT TECH CENTRE provides <strong>regular physical classes</strong> for students wanting hands-on computer training. Through our formal collaboration, students completing courses receive official recognized certificates issued directly through IT TECH CENTRE.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2.5 pt-4 border-t border-slate-800 text-xs sm:text-sm">
+                            <a href="mailto:gatluakpurbol@gmail.com" class="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-colors">
+                                <i data-lucide="mail" class="w-4 h-4 text-cyan-400 shrink-0"></i> gatluakpurbol@gmail.com
+                            </a>
+                            <a href="https://wa.me/25192796239" target="_blank" class="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-colors">
+                                <i data-lucide="phone" class="w-4 h-4 text-cyan-400 shrink-0"></i> +251 927 962 39 (WhatsApp / Phone)
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Dedicated IT Tech Centre Registration Form -->
+                    <div class="md:col-span-7 card-box p-6 sm:p-10 rounded-3xl shadow-2xl space-y-6 border-cyan-500/30">
+                        <div class="space-y-2">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-950 text-cyan-400 border border-cyan-800">
+                                Direct In-Person Class Enrollment
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-bold text-white">Register with IT TECH CENTRE</h3>
+                            <p class="text-slate-400 text-xs sm:text-sm">
+                                Send your registration or inquiry directly to Gatluak Pur Bol for regular classes and official certification.
+                            </p>
+                        </div>
+
+                        <form onsubmit="event.preventDefault();" class="space-y-4">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs sm:text-sm font-medium text-slate-300 mb-1">Full Name</label>
+                                    <input type="text" id="itName" placeholder="e.g. John Doe" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs sm:text-sm font-medium text-slate-300 mb-1">Phone Number (WhatsApp)</label>
+                                    <input type="tel" id="itPhone" placeholder="+251 927 962 39" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs sm:text-sm font-medium text-slate-300 mb-1">Email Address</label>
+                                    <input type="email" id="itEmail" placeholder="student@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs sm:text-sm font-medium text-slate-300 mb-1">Select Training Course</label>
+                                    <select id="itCourse" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                                        <option value="">-- Choose Regular Course --</option>
+                                        <option value="Basic Computer (Regular Class)">Basic Computer (Regular Class)</option>
+                                        <option value="Computer Advanced (Regular Class)">Computer Advanced (Regular Class)</option>
+                                        <option value="Microsoft Excel Mastery (Regular Class)">Microsoft Excel Mastery (Regular Class)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs sm:text-sm font-medium text-slate-300 mb-1">Message / Location</label>
+                                <input type="text" id="itMsg" placeholder="e.g. Interested in regular in-person classes" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                            </div>
+
+                            <!-- Action Buttons to Contact Gatluak Directly -->
+                            <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                                <button type="button" onclick="sendToGatluakWhatsApp()" class="w-full py-3.5 sm:py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-600/25 transition-all flex items-center justify-center gap-2 text-xs sm:text-sm">
+                                    <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Gatluak
+                                </button>
+                                <button type="button" onclick="sendToGatluakEmail()" class="w-full py-3.5 sm:py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl shadow-lg shadow-cyan-600/25 transition-all flex items-center justify-center gap-2 text-xs sm:text-sm">
+                                    <i data-lucide="mail" class="w-4 h-4"></i> Email Gatluak
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Catalog Section (2 Columns with Thumbnails) -->
+        <section id="courses" class="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">Offered Programs</span>
+                <h2 class="text-2xl sm:text-4xl font-bold text-white mt-3">Training Courses & Certification</h2>
+                <p class="text-slate-400 text-sm mt-2">Available online via Naath Tech Academy or through regular physical classes via IT Tech Centre.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 sm:gap-10">
+                <!-- Course 1 -->
+                <div class="card-box rounded-3xl overflow-hidden flex flex-col justify-between hover:border-emerald-500/50 transition-all shadow-xl">
+                    <div class="h-52 sm:h-60 overflow-hidden relative bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="Basic Computer" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-semibold text-emerald-400 border border-slate-700">Online & Regular Class</div>
+                    </div>
+                    <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-white text-xl sm:text-2xl mb-2">Basic Computer</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">Master fundamental hardware, operating systems, file navigation, typing, and basic document processing (Available online or in regular classes).</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 sm:gap-3">
+                            <a href="#register" onclick="selectCourse('Basic Computer')" class="py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-center rounded-xl text-[11px] sm:text-xs transition-colors shadow-md">Naath Tech (Online)</a>
+                            <a href="#ittech" onclick="selectITCourse('Basic Computer (Regular Class)')" class="py-3 bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-center rounded-xl text-[11px] sm:text-xs transition-colors shadow-md">IT Tech (Regular)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="card-box rounded-3xl overflow-hidden flex flex-col justify-between hover:border-emerald-500/50 transition-all shadow-xl">
+                    <div class="h-52 sm:h-60 overflow-hidden relative bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Computer Advanced" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-semibold text-cyan-400 border border-slate-700">Online & Regular Class</div>
+                    </div>
+                    <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-white text-xl sm:text-2xl mb-2">Computer Advanced</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">Advanced software tools, operating system configuration, system troubleshooting, and office productivity mastery (Available online or in regular classes).</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 sm:gap-3">
+                            <a href="#register" onclick="selectCourse('Computer Advanced')" class="py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-center rounded-xl text-[11px] sm:text-xs transition-colors shadow-md">Naath Tech (Online)</a>
+                            <a href="#ittech" onclick="selectITCourse('Computer Advanced (Regular Class)')" class="py-3 bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-center rounded-xl text-[11px] sm:text-xs transition-colors shadow-md">IT Tech (Regular)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="card-box rounded-3xl overflow-hidden flex flex-col justify-between hover:border-emerald-500/50 transition-all shadow-xl">
+                    <div class="h-52 sm:h-60 overflow-hidden relative bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Microsoft Excel & Office" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-semibold text-emerald-400 border border-slate-700">Online & Regular Class</div>
+                    </div>
+                    <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-white text-xl sm:text-2xl mb-2">Microsoft Excel Mastery</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">Professional spreadsheet design, formulas, pivot tables, data sorting, and financial tracking for administrative excellence (Taught online & regular classes).</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 sm:gap-3">
+                            <a href="#register" onclick="selectCourse('Microsoft Excel Mastery')" class="py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-center rounded-xl text-[11px] sm:text-xs transition-colors shadow-md">Naath Tech (Online)</a>
+                            <a href="#ittech" onclick="selectITCourse('Microsoft Excel Mastery (Regular Class)')" class="py-3 bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-center rounded-xl text-[11px] sm:text-xs transition-colors shadow-md">IT Tech (Regular)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="card-box rounded-3xl overflow-hidden flex flex-col justify-between hover:border-emerald-500/50 transition-all shadow-xl">
+                    <div class="h-52 sm:h-60 overflow-hidden relative bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity Fundamentals" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-semibold text-red-400 border border-slate-700">Online Cohort</div>
+                    </div>
+                    <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-white text-xl sm:text-2xl mb-2">Cybersecurity Fundamentals</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">Network security basics, malware defense, password hygiene, phishing protection, and ethical online behavior (Conducted online).</p>
+                        </div>
+                        <a href="#register" onclick="selectCourse('Cybersecurity Fundamentals')" class="w-full py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-center rounded-xl transition-colors shadow-lg shadow-emerald-500/20 text-xs sm:text-sm">Register for Online Cybersecurity</a>
+                    </div>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="card-box rounded-3xl overflow-hidden flex flex-col justify-between hover:border-emerald-500/50 transition-all shadow-xl">
+                    <div class="h-52 sm:h-60 overflow-hidden relative bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Data Analysis" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-semibold text-amber-400 border border-slate-700">Online Cohort</div>
+                    </div>
+                    <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-white text-xl sm:text-2xl mb-2">Data Analysis</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">Data cleaning, SQL database queries, Python analytics (Pandas), and interactive business dashboards (Conducted online).</p>
+                        </div>
+                        <a href="#register" onclick="selectCourse('Data Analysis')" class="w-full py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-center rounded-xl transition-colors shadow-lg shadow-emerald-500/20 text-xs sm:text-sm">Register for Online Data Analysis</a>
+                    </div>
+                </div>
+
+                <!-- Course 6 -->
+                <div class="card-box rounded-3xl overflow-hidden flex flex-col justify-between hover:border-emerald-500/50 transition-all shadow-xl">
+                    <div class="h-52 sm:h-60 overflow-hidden relative bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80" alt="Artificial Intelligence" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-semibold text-purple-400 border border-slate-700">Online Cohort</div>
+                    </div>
+                    <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-white text-xl sm:text-2xl mb-2">Artificial Intelligence (AI)</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">Introduction to Generative AI, prompt engineering, practical productivity tools, and modern AI concepts (Conducted online).</p>
+                        </div>
+                        <a href="#register" onclick="selectCourse('Artificial Intelligence (AI)')" class="w-full py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-center rounded-xl transition-colors shadow-lg shadow-emerald-500/20 text-xs sm:text-sm">Register for Online AI Course</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connect / Social Reach Out Section -->
+        <section id="connect" class="py-20 sm:py-28 bg-slate-900/40 border-t border-slate-800/80 w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">Get in Touch</span>
+                    <h2 class="text-2xl sm:text-4xl font-bold text-white mt-3">Where You Can Reach Out To Me</h2>
+                    <p class="text-slate-400 text-sm mt-2">Connect with Nhial Gach Tut directly through social media, messaging platforms, or email.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- WhatsApp Card -->
+                    <a href="https://wa.me/251903359976?text=Hello%20Nhial,%20I%20am%20reaching%20out%20from%20your%20portfolio." target="_blank" class="card-box p-6 rounded-2xl flex flex-col items-center text-center space-y-4 hover:border-emerald-500/50 transition-all group">
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-950 text-emerald-400 flex items-center justify-center border border-emerald-800 group-hover:scale-110 transition-transform">
+                            <i data-lucide="message-circle" class="w-7 h-7"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-lg">WhatsApp</h3>
+                            <p class="text-xs text-slate-400 mt-1">+251 90 335 9976</p>
+                        </div>
+                        <span class="text-xs font-semibold text-emerald-400 flex items-center gap-1">Chat Now &rarr;</span>
+                    </a>
+
+                    <!-- Email Card -->
+                    <a href="mailto:yohanisnhial@gmail.com" class="card-box p-6 rounded-2xl flex flex-col items-center text-center space-y-4 hover:border-sky-500/50 transition-all group">
+                        <div class="w-14 h-14 rounded-2xl bg-sky-950 text-sky-400 flex items-center justify-center border border-sky-800 group-hover:scale-110 transition-transform">
+                            <i data-lucide="mail" class="w-7 h-7"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-lg">Email</h3>
+                            <p class="text-xs text-slate-400 mt-1">yohanisnhial@gmail.com</p>
+                        </div>
+                        <span class="text-xs font-semibold text-sky-400 flex items-center gap-1">Send Email &rarr;</span>
+                    </a>
+
+                    <!-- YouTube Card -->
+                    <a href="https://youtube.com/@amhariconlineclass" target="_blank" class="card-box p-6 rounded-2xl flex flex-col items-center text-center space-y-4 hover:border-red-500/50 transition-all group">
+                        <div class="w-14 h-14 rounded-2xl bg-red-950 text-red-400 flex items-center justify-center border border-red-800 group-hover:scale-110 transition-transform">
+                            <i data-lucide="youtube" class="w-7 h-7"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-lg">YouTube</h3>
+                            <p class="text-xs text-slate-400 mt-1">@amhariconlineclass</p>
+                        </div>
+                        <span class="text-xs font-semibold text-red-400 flex items-center gap-1">Watch & Learn &rarr;</span>
+                    </a>
+
+                    <!-- GitHub Card -->
+                    <a href="https://github.com/tongolbolpot" target="_blank" class="card-box p-6 rounded-2xl flex flex-col items-center text-center space-y-4 hover:border-cyan-500/50 transition-all group">
+                        <div class="w-14 h-14 rounded-2xl bg-cyan-950 text-cyan-400 flex items-center justify-center border border-cyan-800 group-hover:scale-110 transition-transform">
+                            <i data-lucide="github" class="w-7 h-7"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-lg">GitHub</h3>
+                            <p class="text-xs text-slate-400 mt-1">tongolbolpot</p>
+                        </div>
+                        <span class="text-xs font-semibold text-cyan-400 flex items-center gap-1">View Repos &rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Naath Tech Online Student Registration Section -->
+        <section id="register" class="py-20 sm:py-28 bg-slate-900/30 border-t border-slate-800/80 w-full">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="card-box p-6 sm:p-12 rounded-3xl shadow-2xl space-y-6">
+                    <div class="text-center space-y-2">
+                        <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-950 text-emerald-400 border border-emerald-800">Naath Tech Academy (Online)</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Online Course Enrollment Form</h2>
+                        <p class="text-slate-400 text-xs sm:text-sm max-w-lg mx-auto">
+                            Register for online classes with Nhial Gach Tut and connect instantly via WhatsApp or Email.
+                        </p>
+                    </div>
+
+                    <form onsubmit="event.preventDefault();" class="space-y-4 pt-4">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs sm:text-sm font-medium text-slate-300 mb-1">Full Name</label>
+                                <input type="text" id="regName" placeholder="e.g. John Doe" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs sm:text-sm font-medium text-slate-300 mb-1">Phone Number (WhatsApp)</label>
+                                <input type="tel" id="regPhone" placeholder="+251 90 335 9976" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs sm:text-sm font-medium text-slate-300 mb-1">Email Address</label>
+                                <input type="email" id="regEmail" placeholder="student@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs sm:text-sm font-medium text-slate-300 mb-1">Select Online Course</label>
+                                <select id="courseSelect" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                                    <option value="">-- Choose Online Course --</option>
+                                    <option value="Basic Computer">Basic Computer</option>
+                                    <option value="Computer Advanced">Computer Advanced</option>
+                                    <option value="Microsoft Excel Mastery">Microsoft Excel Mastery</option>
+                                    <option value="Internet & Web Literacy">Internet & Web Literacy</option>
+                                    <option value="Cybersecurity Fundamentals">Cybersecurity Fundamentals</option>
+                                    <option value="Data Analysis">Data Analysis</option>
+                                    <option value="Artificial Intelligence (AI)">Artificial Intelligence (AI)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs sm:text-sm font-medium text-slate-300 mb-1">Your Location / Region (Bentiu, Fangak, Akobo, Nasir, etc.)</label>
+                            <input type="text" id="regLocation" placeholder="e.g. Bentiu" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                        </div>
+
+                        <!-- Action Buttons for WhatsApp or Email -->
+                        <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                            <button type="button" onclick="sendViaWhatsApp()" class="w-full py-3.5 sm:py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-600/25 transition-all flex items-center justify-center gap-2 text-xs sm:text-sm">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i> Send via WhatsApp to Nhial
+                            </button>
+                            <button type="button" onclick="sendViaEmail()" class="w-full py-3.5 sm:py-4 bg-sky-600 hover:bg-sky-500 text-white font-bold rounded-xl shadow-lg shadow-sky-600/25 transition-all flex items-center justify-center gap-2 text-xs sm:text-sm">
+                                <i data-lucide="mail" class="w-5 h-5"></i> Send via Email to Nhial
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/80 py-10 bg-slate-950 w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs sm:text-sm text-slate-400 space-y-2">
+            <p>© 2026 Nhial Gach Tut (Yohanis Nhial) · NAATH TECH ACADEMY (Online) & IT TECH CENTRE (Regular In-Person Classes). Certificates officially issued via IT TECH CENTRE (Director: Gatluak Pur Bol, Metu University Graduate).</p>
+            <p class="text-[11px] text-slate-500">Empowering youth in Bentiu, Fangak, Akobo, Nasir, and globally · All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script for Lucide Icons & Interactive Form Submission Options -->
+    <script>
+        lucide.createIcons();
+
+        function selectCourse(courseName) {
+            const selectEl = document.getElementById('courseSelect');
+            if (selectEl) {
+                selectEl.value = courseName;
+            }
+            window.location.href = '#register';
+        }
+
+        function selectITCourse(courseName) {
+            const selectEl = document.getElementById('itCourse');
+            if (selectEl) {
+                selectEl.value = courseName;
+            }
+            window.location.href = '#ittech';
+        }
+
+        function sendViaWhatsApp() {
+            const name = document.getElementById('regName').value.trim();
+            const phone = document.getElementById('regPhone').value.trim();
+            const email = document.getElementById('regEmail').value.trim();
+            const course = document.getElementById('courseSelect').value;
+            const location = document.getElementById('regLocation').value.trim();
+
+            if (!name || !phone || !course) {
+                alert('Please fill in your Name, Phone Number, and select a Course.');
+                return;
+            }
+
+            const text = `Hello Nhial, I would like to register for Naath Tech Academy Online.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Email:* ${email || 'N/A'}%0A*Course:* ${course}%0A*Location:* ${location || 'N/A'}`;
+            window.open(`https://wa.me/251903359976?text=${text}`, '_blank');
+        }
+
+        function sendViaEmail() {
+            const name = document.getElementById('regName').value.trim();
+            const phone = document.getElementById('regPhone').value.trim();
+            const email = document.getElementById('regEmail').value.trim();
+            const course = document.getElementById('courseSelect').value;
+            const location = document.getElementById('regLocation').value.trim();
+
+            if (!name || !course) {
+                alert('Please fill in your Name and select a Course.');
+                return;
+            }
+
+            const subject = encodeURIComponent(`Online Course Registration: ${course} - ${name}`);
+            const body = encodeURIComponent(`Hello Nhial,\n\nI want to register for Naath Tech Academy Online.\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nCourse: ${course}\nLocation: ${location}`);
+            
+            window.location.href = `mailto:yohanisnhial@gmail.com?subject=${subject}&body=${body}`;
+        }
+
+        function sendToGatluakWhatsApp() {
+            const name = document.getElementById('itName').value.trim();
+            const phone = document.getElementById('itPhone').value.trim();
+            const email = document.getElementById('itEmail').value.trim();
+            const course = document.getElementById('itCourse').value;
+            const msg = document.getElementById('itMsg').value.trim();
+
+            if (!name || !phone || !course) {
+                alert('Please fill in your Name, Phone Number, and select a Training Course.');
+                return;
+            }
+
+            const text = `Hello Gatluak Pur, I would like to register for IT Tech Centre regular classes.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Email:* ${email || 'N/A'}%0A*Course:* ${course}%0A*Message:* ${msg || 'N/A'}`;
+            window.open(`https://wa.me/25192796239?text=${text}`, '_blank');
+        }
+
+        function sendToGatluakEmail() {
+            const name = document.getElementById('itName').value.trim();
+            const phone = document.getElementById('itPhone').value.trim();
+            const email = document.getElementById('itEmail').value.trim();
+            const course = document.getElementById('itCourse').value;
+            const msg = document.getElementById('itMsg').value.trim();
+
+            if (!name || !course) {
+                alert('Please fill in your Name and select a Training Course.');
+                return;
+            }
+
+            const subject = encodeURIComponent(`IT Tech Centre Regular Class Registration: ${course} - ${name}`);
+            const body = encodeURIComponent(`Hello Gatluak Pur,\n\nI want to register for IT Tech Centre regular classes.\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nCourse: ${course}\nMessage: ${msg}`);
+            
+            window.location.href = `mailto:gatluakpurbol@gmail.com?subject=${subject}&body=${body}`;
+        }
+    </script>
+</body>
+</html>
